@@ -22,7 +22,7 @@
         /* Navbar Styles */
         .navbar {
             width: 100%;
-            padding: 1rem;
+            padding: 0.5rem;
         }
 
         .navbar-brand {
@@ -41,17 +41,19 @@
         /* About Section */
         #about {
             width: 100%;
-            padding: 3rem 1rem;
+            padding: 0.5rem;
+            margin-top: 0;
         }
 
         #about img {
             max-width: 100%;
             height: auto;
-            margin-bottom: 2rem;
+            margin-bottom: 1rem;
         }
 
         #about .row {
             align-items: center;
+            padding-top: 0;
         }
 
         /* Projects Section */
@@ -101,7 +103,7 @@
 
         @media (max-width: 992px) {
             .navbar-nav {
-                margin-top: 1rem;
+                margin-top: 0.5rem;
             }
 
             .nav-item {
@@ -161,7 +163,7 @@
         .video-container {
             position: relative;
             width: 100%;
-            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            padding-bottom: 56.25%;
         }
 
         .video-container iframe {
@@ -194,7 +196,7 @@
     </style>
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg bg-dark">
+    <nav class="navbar navbar-expand-lg bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="/">
                 <h3 style="color: white">
@@ -224,31 +226,29 @@
             </div>
         </div>
     </nav>
-    <!-- -------------------------------------------------------------------------------------------------------- -->
+
     <div id="about" style="background-color: #092D21; color: white;">
-    <div class="container py-5">
-        <div class="row pt-5 pb-5">
-            <div class="col-12 col-md-1"></div>
-            <div class="col-12 col-md-4 d-flex justify-content-center">
-                <img src="../static/uploads/xyz.png" class="img-fluid rounded" alt="Anuj Kothiyal" style="border-radius: 5%;"/>
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-12 col-md-1"></div>
+                <div class="col-12 col-md-4 d-flex justify-content-center">
+                    <img src="../static/uploads/xyz.png" class="img-fluid rounded" alt="Anuj Kothiyal" style="border-radius: 5%;"/>
+                </div>
+                <div class="col-12 col-md-1"></div>
+                <div class="col-12 col-md-5 mb-4 mt-4">
+                    <h3 class="mb-4">I am <span style="color: #F5D314">Anuj Kothiyal</span>,</h3>
+                    <h6 class="mb-4">A versatile professional with expertise in</h6>
+                    <h6 class="mb-4">Data Science | Data Engineering | Machine Learning</h6>
+                    <h6 class="mb-4">Eager to tackle new challenges that push the boundaries of AI and data innovation.</h6>
+                </div>
+                <div class="col-12 col-md-1"></div>
             </div>
-            <div class="col-12 col-md-1"></div>
-            <div class="col-12 col-md-5 mb-4 mt-4">
-                <h3 class="mb-4">I am <span style="color: #F5D314">Anuj Kothiyal</span>,</h3>
-                <h6 class="mb-4">A versatile professional with expertise in</h6>
-                <h6 class="mb-4">Data Science | Data Engineering | Machine Learning</h6>
-                <h6 class="mb-4">Eager to tackle new challenges that push the boundaries of AI and data innovation.</h6>
-            </div>
-            <div class="col-12 col-md-1"></div>
         </div>
     </div>
-</div>
 
-    <!-- -------------------------------------------------------------------------------------------------------- -->
-    <div id="projects" style="background-color: #092D21; width: 100vw;">
-        <div class="container py-5">
+        <div id="projects" style="background-color: #092D21; width: 100vw;">
+        <div class="container py-3">  <!-- Reduced padding -->
             <div class="row justify-content-center g-4 text-center">
-                <!-- Project 1: HR Analytics -->
                 <div class="col-lg-5 col-md-6 col-sm-12 card pt-3">
                     <h5 class="card-title">HR Analytics (Employee Attrition)</h5>
                     <img src="../static/uploads/hr-analytics.png" class="card-img-top" alt="HR Analytics Project" style="width: 100%; height: auto;">
@@ -256,16 +256,14 @@
                         <a href="https://github.com/artist-gen1/HR-Analytics-Report" class="btn btn-success">Source Code</a>
                     </div>
                 </div>
-                </div>
+            </div>
             <div class="row justify-content-center g-4 text-center">
-                <!-- Project 2: YouTube Video Embed -->
-                <div class="col-lg-5 col-md-6 col-sm-12 p-3 pt-5">
+                <div class="col-lg-5 col-md-6 col-sm-12 p-3">  <!-- Removed pt-5 -->
                     <div class="ratio ratio-16x9">
                         <iframe width="560" height="315" src="https://www.youtube.com/embed/oAQYgrX1UGs?si=VWJbsEVCuIB4Ym7r" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     </div>
                 </div>
-                <!-- Project 2: YouTube Video Embed -->
-                <div class="col-lg-5 col-md-6 col-sm-12 p-3 pt-5">
+                <div class="col-lg-5 col-md-6 col-sm-12 p-3">  <!-- Removed pt-5 -->
                     <div class="ratio ratio-16x9">
                         <iframe src="https://www.youtube.com/embed/SESH--gqOag?si=cHsihPIwogCVsr67"
                             title="YouTube video player"
@@ -278,30 +276,22 @@
         </div>
     </div>
 
-    <!-- -------------------------------------------------------------------------------------------------------- -->
-
-  <!-- -------------------------------------------------------------------------------------------------------- -->
-  <div id="certifications" style="background-color: #092D21; width: 100vw;">
-    <div class="row pt-5 pb-5 justify-content-center">
-        <!-- Certification 2 Card -->
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4 d-flex justify-content-center">
-            <div class="card pt-3" style="max-width: 300px;">
-                <div class="text-center">
-                    <img src="../static/uploads/opencv.png" class="card-img-top" alt="OpenCV Certification Badge" style="max-width: 100%; height: auto; max-width: 300px;" />
-                    <h5 class="card-title mt-3">Mastering OpenCV with Python</h5>
-                    <div class="card-body">
-                        <a href="https://courses.opencv.org/certificates/18ad8948133f41b6b9867534070131d6" class="btn btn-success">Link <i class="fas fa-link"></i></a>
+       <div id="certifications" style="background-color: #092D21; width: 100vw;">
+        <div class="row py-3 justify-content-center">  <!-- Changed pt-5 pb-5 to py-3 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4 d-flex justify-content-center">
+                <div class="card pt-3" style="max-width: 300px;">
+                    <div class="text-center">
+                        <img src="../static/uploads/opencv.png" class="card-img-top" alt="OpenCV Certification Badge" style="max-width: 100%; height: auto; max-width: 300px;" />
+                        <h5 class="card-title mt-3">Mastering OpenCV with Python</h5>
+                        <div class="card-body">
+                            <a href="https://courses.opencv.org/certificates/18ad8948133f41b6b9867534070131d6" class="btn btn-success">Link <i class="fas fa-link"></i></a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
-    <!-- -------------------------------------------------------------------------------------------------------- -->
-
-
-    <!-- -------------------------------------------------------------------------------------------------------- -->
     <div id="contact" class="pb-5" style="background-color: black; width: 100vw; color: white">
         <div class="pt-5 text-center">
             <div class="mb-4">
@@ -311,12 +301,10 @@
             <h5>Anuj Kothiyal</h5>
         </div>
     </div>
-    <!-- -------------------------------------------------------------------------------------------------------- -->
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        // Fix navbar collapse on mobile
         document.addEventListener('DOMContentLoaded', function() {
             const navLinks = document.querySelectorAll('.nav-link');
             const navbarCollapse = document.querySelector('.navbar-collapse');
