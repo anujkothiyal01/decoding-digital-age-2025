@@ -2,16 +2,194 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Decoding Digital Age</title>
     <link rel="shortcut icon" href="../static/uploads/xyz.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <style>
-        body{
-            overflow-x: hidden;
+        :root {
+            --primary-color: #092D21;
+            --accent-color: #F5D314;
         }
-        li{
-            list-style-type: none;
+
+        body {
+            overflow-x: hidden;
+            width: 100%;
+            max-width: 100vw;
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            width: 100%;
+            padding: 1rem;
+        }
+
+        .navbar-brand {
+            padding-left: 1rem;
+        }
+
+        .navbar-nav {
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .nav-item {
+            margin: 0.5rem 1rem !important;
+        }
+
+        /* About Section */
+        #about {
+            width: 100%;
+            padding: 3rem 1rem;
+        }
+
+        #about img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 2rem;
+        }
+
+        #about .row {
+            align-items: center;
+        }
+
+        /* Projects Section */
+        #projects {
+            width: 100%;
+            padding: 3rem 1rem;
+        }
+
+        .card {
+            margin-bottom: 2rem;
+            height: 100%;
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .ratio {
+            width: 100%;
+            margin-bottom: 2rem;
+        }
+
+        /* Certifications Section */
+        #certifications {
+            width: 100%;
+            padding: 3rem 1rem;
+        }
+
+        .cert-card {
+            margin-bottom: 2rem;
+        }
+
+        /* Contact Section */
+        #contact {
+            width: 100%;
+            padding: 3rem 1rem;
+        }
+
+        /* Responsive Grid */
+        @media (max-width: 1200px) {
+            .container {
+                max-width: 95%;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .navbar-nav {
+                margin-top: 1rem;
+            }
+
+            .nav-item {
+                margin: 0.3rem 0 !important;
+            }
+        }
+
+        @media (max-width: 768px) {
+            #about .col-md-4 {
+                text-align: center;
+            }
+
+            #about img {
+                max-width: 80%;
+            }
+
+            .card, .cert-card {
+                max-width: 90%;
+                margin: 0 auto 2rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .navbar-brand h3 {
+                font-size: 1.5rem;
+            }
+
+            #about img {
+                max-width: 100%;
+            }
+
+            .card, .cert-card {
+                max-width: 100%;
+            }
+
+            h3 {
+                font-size: 1.75rem;
+            }
+
+            h6 {
+                font-size: 1rem;
+            }
+        }
+
+        /* Fix for horizontal scroll */
+        .row {
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        .container-fluid {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        /* YouTube video container */
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        /* Image aspect ratio fix */
+        .img-fluid {
+            max-width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        /* Fix for social icons */
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .social-links a {
+            font-size: 1.5rem;
         }
     </style>
 </head>
@@ -137,5 +315,20 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Fix navbar collapse on mobile
+        document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('.nav-link');
+            const navbarCollapse = document.querySelector('.navbar-collapse');
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    if (window.innerWidth < 992) {
+                        navbarCollapse.classList.remove('show');
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
