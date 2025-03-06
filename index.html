@@ -17,7 +17,9 @@
             overflow-x: hidden;
             width: 100%;
             max-width: 100vw;
+            background: linear-gradient(to right, #4facfe, #00f2fe);
         }
+
 
         /* Navbar Styles */
         .navbar {
@@ -28,6 +30,16 @@
         .navbar-brand {
             padding-left: 1rem;
         }
+
+.profile-img {
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border: 5px solid white;
+    box-shadow: 0 0 10px #ff3131, 0 0 20px #ff8800, 0 0 30px #ffcc00;
+}
+
 
         .navbar-nav {
             margin: 0 auto;
@@ -196,7 +208,7 @@
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg bg-dark">
+    <nav class="navbar navbar-expand-lg bg-black">
         <div class="container-fluid">
             <a class="navbar-brand" href="/">
                 <h3 style="color: white">
@@ -227,36 +239,81 @@
         </div>
     </nav>
 
-    <div id="about" style="background-color: #092D21; color: white;">
-        <div class="container py-5">
-            <div class="row">
-                <div class="col-12 col-md-1"></div>
-                <div class="col-12 col-md-4 d-flex justify-content-center">
-                    <img src="../static/uploads/xyz.png" class="img-fluid rounded" alt="Anuj Kothiyal" style="border-radius: 5%;"/>
-                </div>
-                <div class="col-12 col-md-1"></div>
-                <div class="col-12 col-md-5 mb-4 mt-4">
-                    <h3 class="mb-4">I am <span style="color: #F5D314">Anuj Kothiyal</span>,</h3>
-                    <h6 class="mb-4">A versatile professional with expertise in</h6>
-                    <h6 class="mb-4">Data Science | Data Engineering | Machine Learning</h6>
-                    <h6 class="mb-4">Eager to tackle new challenges that push the boundaries of AI and data innovation.</h6>
-                </div>
-                <div class="col-12 col-md-1"></div>
+ <div id="about" style="background-color: #092D21; color: white;">
+    <div class="container py-5">
+        <div class="row justify-content-center align-items-center">
+<!--            <div class="col-12 col-md-4 d-flex justify-content-center">-->
+<!--                <img src="../static/uploads/anuj1.jpg"-->
+<!--                     class="img-fluid rounded"-->
+<!--                     alt="Anuj Kothiyal"-->
+<!--                     style="border-radius: 5%; max-width: 100%; height: auto;" />-->
+<!--            </div>-->
+        <div class="col-12 col-md-4 d-flex justify-content-center">
+            <img src="../static/uploads/anuj2.jpg"
+                 class="profile-img"
+                 alt="Anuj Kothiyal" />
+        </div>
+            <div class="col-12 col-md-6 text-md-start mt-4">
+                <h3 class="mb-3">
+                    I am <span style="color: #F5D314;">Anuj Kothiyal</span>,
+                </h3>
+                <h6 class="mb-3">
+                    An AI Developer & Data Engineer passionate about building intelligent solutions that drive business value.
+                </h6>
+                <h6 class="mb-3">I specialize in:</h6>
+                <ul class="mb-3" style="list-style: none; padding: 0;">
+                    <li>✅ Developing AI-powered applications</li>
+                    <li>✅ Building scalable data pipelines</li>
+                    <li>✅ Creating insightful data visualizations</li>
+                    <li>✅ Implementing cloud-based AI solutions</li>
+                </ul>
+                <h6>
+                    I enjoy sharing my knowledge through projects, blogs, and tutorials to help others explore the fascinating world of AI & Data.
+                    Explore my projects and certifications to see my work in action! 🚀
+                </h6>
             </div>
         </div>
     </div>
+</div>
+
 
         <div id="projects" style="background-color: #092D21; width: 100vw;">
         <div class="container py-3">  <!-- Reduced padding -->
             <div class="row justify-content-center g-4 text-center">
-                <div class="col-lg-5 col-md-6 col-sm-12 card pt-3">
+                <div class="col-lg-5 col-md-6 col-sm-12 card pt-3 mx-lg-3">
                     <h5 class="card-title">HR Analytics (Employee Attrition)</h5>
                     <img src="../static/uploads/hr-analytics.png" class="card-img-top" alt="HR Analytics Project" style="width: 100%; height: auto;">
                     <div class="card-body">
                         <a href="https://github.com/artist-gen1/HR-Analytics-Report" class="btn btn-success">Source Code</a>
                     </div>
                 </div>
+
+                <div class="col-lg-5 col-md-6 col-sm-12 card pt-3 mx-lg-3">
+                    <h5 class="card-title">Azure Data Engineering Pipeline with ADF & Databricks</h5>
+                    <img src="../static/uploads/azure_pipeline.png" class="card-img-top" alt="HR Analytics Project" style="width: 100%; height: auto;">
+                    <div class="card-body">
+                        <a href="https://github.com/anujkothiyal01/azure_de_pipeline_adf_db_nyc" class="btn btn-success">Source Code</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-5 col-md-6 col-sm-12 card pt-3 mx-lg-3">
+                    <h5 class="card-title">ETL Pipeline using AWS [S3, Glue, Lambda, IAM]</h5>
+                    <img src="../static/uploads/etl_pipeline_aws.png" class="card-img-top" alt="HR Analytics Project" style="width: 100%; height: auto;">
+                    <div class="card-body">
+                        <a href="https://github.com/anujkothiyal01/etl-pipeline-1" class="btn btn-success">Source Code</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-5 col-md-6 col-sm-12 card pt-3 mx-lg-3">
+                    <img src="../static/uploads/opencv.png" class="card-img-top" alt="HR Analytics Project" style="width: 100%; height: auto;">
+                    <div class="card-body">
+                        <a href="https://github.com/artist-gen1/HR-Analytics-Report" class="btn btn-success">Link</a>
+                    </div>
+                </div>
             </div>
+
+
+
             <div class="row justify-content-center g-4 text-center">
                 <div class="col-lg-5 col-md-6 col-sm-12 p-3">  <!-- Removed pt-5 -->
                     <div class="ratio ratio-16x9">
@@ -276,21 +333,7 @@
         </div>
     </div>
 
-       <div id="certifications" style="background-color: #092D21; width: 100vw;">
-        <div class="row py-3 justify-content-center">  <!-- Changed pt-5 pb-5 to py-3 -->
-            <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4 d-flex justify-content-center">
-                <div class="card pt-3" style="max-width: 300px;">
-                    <div class="text-center">
-                        <img src="../static/uploads/opencv.png" class="card-img-top" alt="OpenCV Certification Badge" style="max-width: 100%; height: auto; max-width: 300px;" />
-                        <h5 class="card-title mt-3">Mastering OpenCV with Python</h5>
-                        <div class="card-body">
-                            <a href="https://courses.opencv.org/certificates/18ad8948133f41b6b9867534070131d6" class="btn btn-success">Link <i class="fas fa-link"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+
 
     <div id="contact" class="pb-5" style="background-color: black; width: 100vw; color: white">
         <div class="pt-5 text-center">
