@@ -20,6 +20,7 @@
             background: linear-gradient(to right, #4facfe, #00f2fe);
         }
 
+
         /* Navbar Styles */
         .navbar {
             width: 100%;
@@ -30,14 +31,15 @@
             padding-left: 1rem;
         }
 
-        .profile-img {
-            border-radius: 50%;
-            width: 250px;
-            height: 250px;
-            object-fit: cover;
-            border: 5px solid white;
-            box-shadow: 0 0 10px #ff3131, 0 0 20px #ff8800, 0 0 30px #ffcc00;
-        }
+.profile-img {
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border: 5px solid white;
+    box-shadow: 0 0 10px #ff3131, 0 0 20px #ff8800, 0 0 30px #ffcc00;
+}
+
 
         .navbar-nav {
             margin: 0 auto;
@@ -74,53 +76,13 @@
 
         .card {
             margin-bottom: 2rem;
-            height: 100%; /* Keep this for the grid layout */
-            min-height: 450px; /* Set a minimum height to ensure uniformity */
-            display: flex;
-            flex-direction: column; /* Ensure content stacks vertically */
-            justify-content: space-between; /* Distribute content evenly */
+            height: 100%;
         }
 
-        .card-img-top {
+        .card img {
             width: 100%;
-            height: 200px; /* Fixed height for images */
-            object-fit: cover; /* Ensure images scale properly without distortion */
-        }
-
-        .card-body {
-            flex-grow: 1; /* Allow the body to grow and fill space */
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between; /* Space out the content in the body */
-        }
-
-        .card-title {
-            font-size: 1.25rem; /* Consistent font size for titles */
-            min-height: 60px; /* Reserve space for titles to prevent overflow */
-            display: -webkit-box;
-            -webkit-line-clamp: 2; /* Limit title to 2 lines */
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-            text-overflow: ellipsis; /* Add ellipsis for overflow */
-        }
-
-        .card-body .btn {
-            margin-top: auto; /* Push buttons to the bottom of the card */
-        }
-
-        /* Button Container for Side-by-Side Alignment */
-        .button-container {
-            display: flex;
-            justify-content: center; /* Center the buttons horizontally */
-            gap: 1rem; /* Add spacing between the buttons */
-            flex-wrap: wrap; /* Allow buttons to wrap on smaller screens if needed */
-        }
-
-        /* Ensure buttons have consistent width for better alignment */
-        .button-container .btn {
-            flex: 1; /* Make buttons take equal space */
-            min-width: 120px; /* Ensure buttons don't shrink too much */
-            text-align: center; /* Center the text inside buttons */
+            height: auto;
+            object-fit: cover;
         }
 
         .ratio {
@@ -173,15 +135,6 @@
             .card, .cert-card {
                 max-width: 90%;
                 margin: 0 auto 2rem;
-                min-height: 400px; /* Slightly smaller for smaller screens */
-            }
-
-            .card-img-top {
-                height: 180px; /* Adjust image height for smaller screens */
-            }
-
-            .card-title {
-                min-height: 50px; /* Adjust title height for smaller screens */
             }
         }
 
@@ -196,15 +149,6 @@
 
             .card, .cert-card {
                 max-width: 100%;
-                min-height: 350px; /* Even smaller for mobile */
-            }
-
-            .card-img-top {
-                height: 150px; /* Adjust image height for mobile */
-            }
-
-            .card-title {
-                min-height: 40px; /* Adjust title height for mobile */
             }
 
             h3 {
@@ -213,16 +157,6 @@
 
             h6 {
                 font-size: 1rem;
-            }
-
-            .button-container {
-                flex-direction: column; /* Stack buttons vertically on very small screens */
-                gap: 0.5rem; /* Reduce gap for smaller screens */
-            }
-
-            .button-container .btn {
-                flex: none; /* Remove flex grow on small screens */
-                width: 100%; /* Make buttons full-width on small screens */
             }
         }
 
@@ -305,39 +239,46 @@
         </div>
     </nav>
 
-    <div id="about" style="background-color: #092D21; color: white;">
-        <div class="container py-5">
-            <div class="row justify-content-center align-items-center">
-                <div class="col-12 col-md-4 d-flex justify-content-center">
-                    <img src="../static/uploads/anuj2.jpg"
-                         class="profile-img"
-                         alt="Anuj Kothiyal" />
-                </div>
-                <div class="col-12 col-md-6 text-md-start mt-4">
-                    <h3 class="mb-3">
-                        I am <span style="color: #F5D314;">Anuj Kothiyal</span>,
-                    </h3>
-                    <h6 class="mb-3">
-                        An AI Developer & Data Engineer passionate about building intelligent solutions that drive business value.
-                    </h6>
-                    <h6 class="mb-3">I specialize in:</h6>
-                    <ul class="mb-3" style="list-style: none; padding: 0;">
-                        <li>✅ Developing AI-powered applications</li>
-                        <li>✅ Building scalable data pipelines</li>
-                        <li>✅ Creating insightful data visualizations</li>
-                        <li>✅ Implementing cloud-based AI solutions</li>
-                    </ul>
-                    <h6>
-                        I enjoy sharing my knowledge through projects, blogs, and tutorials to help others explore the fascinating world of AI & Data.
-                        Explore my projects and certifications to see my work in action! 🚀
-                    </h6>
-                </div>
+ <div id="about" style="background-color: #092D21; color: white;">
+    <div class="container py-5">
+        <div class="row justify-content-center align-items-center">
+<!--            <div class="col-12 col-md-4 d-flex justify-content-center">-->
+<!--                <img src="../static/uploads/anuj1.jpg"-->
+<!--                     class="img-fluid rounded"-->
+<!--                     alt="Anuj Kothiyal"-->
+<!--                     style="border-radius: 5%; max-width: 100%; height: auto;" />-->
+<!--            </div>-->
+        <div class="col-12 col-md-4 d-flex justify-content-center">
+            <img src="../static/uploads/anuj2.jpg"
+                 class="profile-img"
+                 alt="Anuj Kothiyal" />
+        </div>
+            <div class="col-12 col-md-6 text-md-start mt-4">
+                <h3 class="mb-3">
+                    I am <span style="color: #F5D314;">Anuj Kothiyal</span>,
+                </h3>
+                <h6 class="mb-3">
+                    An AI Developer & Data Engineer passionate about building intelligent solutions that drive business value.
+                </h6>
+                <h6 class="mb-3">I specialize in:</h6>
+                <ul class="mb-3" style="list-style: none; padding: 0;">
+                    <li>✅ Developing AI-powered applications</li>
+                    <li>✅ Building scalable data pipelines</li>
+                    <li>✅ Creating insightful data visualizations</li>
+                    <li>✅ Implementing cloud-based AI solutions</li>
+                </ul>
+                <h6>
+                    I enjoy sharing my knowledge through projects, blogs, and tutorials to help others explore the fascinating world of AI & Data.
+                    Explore my projects and certifications to see my work in action! 🚀
+                </h6>
             </div>
         </div>
     </div>
+</div>
 
-    <div id="projects" style="background-color: #092D21; width: 100vw;">
-        <div class="container py-3">
+
+        <div id="projects" style="background-color: #092D21; width: 100vw;">
+        <div class="container py-3">  <!-- Reduced padding -->
             <div class="row justify-content-center g-4 text-center">
                 <div class="col-lg-5 col-md-6 col-sm-12 card pt-3 mx-lg-3">
                     <h5 class="card-title">HR Analytics (Employee Attrition)</h5>
@@ -355,27 +296,22 @@
                     </div>
                 </div>
 
-                <!-- Happiness Data Loader Project Card -->
+                <div class="col-lg-5 col-md-6 col-sm-12 card pt-3 mx-lg-3">
+                    <h5 class="card-title">Retail Sales Tracking Project [Snowflake + Streamlit]</h5>
+                    <img src="../static/uploads/retail_sales_tracking_project.png" class="card-img-top" alt="Retail Sales Tracking Project" style="width: 100%; height: auto;">
+                    <div class="card-body">
+                        <a href="https://github.com/anujkothiyal01/snowflake_projects" class="btn btn-success">Source Code</a>
+                        <a href="https://medium.com/@anujkothiyal/uncovering-the-happiest-countries-with-snowflake-a-quick-data-project-8e5998d81e6a" class="btn btn-primary">Medium Blog</a>
+                    </div>
+                </div>
+
+                <!-- Add the Happiness Data Loader Project Card -->
                 <div class="col-lg-5 col-md-6 col-sm-12 card pt-3 mx-lg-3">
                     <h5 class="card-title">Happiness Data Loader</h5>
                     <img src="../static/uploads/happiness_report.png" class="card-img-top" alt="Happiness Data Loader Project" style="width: 100%; height: auto;">
                     <div class="card-body">
-                        <div class="button-container">
-                            <a href="https://github.com/anujkothiyal01/snowflake_projects" class="btn btn-success">Source Code</a>
-                            <a href="https://medium.com/@anujkothiyal/uncovering-the-happiest-countries-with-snowflake-a-quick-data-project-8e5998d81e6a" class="btn btn-primary">Medium Blog</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Retail Sales Tracking Project Card -->
-                <div class="col-lg-5 col-md-6 col-sm-12 card pt-3 mx-lg-3">
-                    <h5 class="card-title">Retail Sales Tracking Project [Snowflake + Streamlit]</h5>
-                    <img src="../static/uploads/retail_sales_tracking_project.png" class="card-img-top" alt="Happiness Data Loader Project" style="width: 100%; height: auto;">
-                    <div class="card-body">
-                        <div class="button-container">
-                            <a href="https://github.com/anujkothiyal01/snowflake_projects" class="btn btn-success">Source Code</a>
-                            <a href="https://medium.com/@anujkothiyal/uncovering-the-happiest-countries-with-snowflake-a-quick-data-project-8e5998d81e6a" class="btn btn-primary">Medium Blog</a>
-                        </div>
+                        <a href="https://github.com/anujkothiyal01/snowflake_projects" class="btn btn-success">Source Code</a>
+                        <a href="https://medium.com/@anujkothiyal/uncovering-the-happiest-countries-with-snowflake-a-quick-data-project-8e5998d81e6a" class="btn btn-primary">Medium Blog</a>
                     </div>
                 </div>
 
@@ -395,13 +331,15 @@
                 </div>
             </div>
 
+
+
             <div class="row justify-content-center g-4 text-center">
-                <div class="col-lg-5 col-md-6 col-sm-12 p-3">
+                <div class="col-lg-5 col-md-6 col-sm-12 p-3">  <!-- Removed pt-5 -->
                     <div class="ratio ratio-16x9">
                         <iframe width="560" height="315" src="https://www.youtube.com/embed/oAQYgrX1UGs?si=VWJbsEVCuIB4Ym7r" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     </div>
                 </div>
-                <div class="col-lg-5 col-md-6 col-sm-12 p-3">
+                <div class="col-lg-5 col-md-6 col-sm-12 p-3">  <!-- Removed pt-5 -->
                     <div class="ratio ratio-16x9">
                         <iframe src="https://www.youtube.com/embed/SESH--gqOag?si=cHsihPIwogCVsr67"
                             title="YouTube video player"
@@ -413,6 +351,8 @@
             </div>
         </div>
     </div>
+
+
 
     <div id="contact" class="pb-5" style="background-color: black; width: 100vw; color: white">
         <div class="pt-5 text-center">
