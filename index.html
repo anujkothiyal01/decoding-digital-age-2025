@@ -20,7 +20,6 @@
             background: linear-gradient(to right, #4facfe, #00f2fe);
         }
 
-
         /* Navbar Styles */
         .navbar {
             width: 100%;
@@ -31,15 +30,14 @@
             padding-left: 1rem;
         }
 
-.profile-img {
-    border-radius: 50%;
-    width: 250px;
-    height: 250px;
-    object-fit: cover;
-    border: 5px solid white;
-    box-shadow: 0 0 10px #ff3131, 0 0 20px #ff8800, 0 0 30px #ffcc00;
-}
-
+        .profile-img {
+            border-radius: 50%;
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            border: 5px solid white;
+            box-shadow: 0 0 10px #ff3131, 0 0 20px #ff8800, 0 0 30px #ffcc00;
+        }
 
         .navbar-nav {
             margin: 0 auto;
@@ -158,6 +156,18 @@
             h6 {
                 font-size: 1rem;
             }
+
+            /* Ensure buttons stack vertically and add spacing on small screens */
+            .card-body .btn {
+                display: block; /* Stack buttons vertically */
+                width: 100%; /* Make buttons full-width */
+                margin-bottom: 1rem; /* Add spacing between buttons */
+            }
+
+            /* Remove the margin-bottom from the last button to avoid extra space at the bottom */
+            .card-body .btn:last-child {
+                margin-bottom: 0;
+            }
         }
 
         /* Fix for horizontal scroll */
@@ -239,46 +249,39 @@
         </div>
     </nav>
 
- <div id="about" style="background-color: #092D21; color: white;">
-    <div class="container py-5">
-        <div class="row justify-content-center align-items-center">
-<!--            <div class="col-12 col-md-4 d-flex justify-content-center">-->
-<!--                <img src="../static/uploads/anuj1.jpg"-->
-<!--                     class="img-fluid rounded"-->
-<!--                     alt="Anuj Kothiyal"-->
-<!--                     style="border-radius: 5%; max-width: 100%; height: auto;" />-->
-<!--            </div>-->
-        <div class="col-12 col-md-4 d-flex justify-content-center">
-            <img src="../static/uploads/anuj2.jpg"
-                 class="profile-img"
-                 alt="Anuj Kothiyal" />
-        </div>
-            <div class="col-12 col-md-6 text-md-start mt-4">
-                <h3 class="mb-3">
-                    I am <span style="color: #F5D314;">Anuj Kothiyal</span>,
-                </h3>
-                <h6 class="mb-3">
-                    An AI Developer & Data Engineer passionate about building intelligent solutions that drive business value.
-                </h6>
-                <h6 class="mb-3">I specialize in:</h6>
-                <ul class="mb-3" style="list-style: none; padding: 0;">
-                    <li>✅ Developing AI-powered applications</li>
-                    <li>✅ Building scalable data pipelines</li>
-                    <li>✅ Creating insightful data visualizations</li>
-                    <li>✅ Implementing cloud-based AI solutions</li>
-                </ul>
-                <h6>
-                    I enjoy sharing my knowledge through projects, blogs, and tutorials to help others explore the fascinating world of AI & Data.
-                    Explore my projects and certifications to see my work in action! 🚀
-                </h6>
+    <div id="about" style="background-color: #092D21; color: white;">
+        <div class="container py-5">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-12 col-md-4 d-flex justify-content-center">
+                    <img src="../static/uploads/anuj2.jpg"
+                         class="profile-img"
+                         alt="Anuj Kothiyal" />
+                </div>
+                <div class="col-12 col-md-6 text-md-start mt-4">
+                    <h3 class="mb-3">
+                        I am <span style="color: #F5D314;">Anuj Kothiyal</span>,
+                    </h3>
+                    <h6 class="mb-3">
+                        An AI Developer & Data Engineer passionate about building intelligent solutions that drive business value.
+                    </h6>
+                    <h6 class="mb-3">I specialize in:</h6>
+                    <ul class="mb-3" style="list-style: none; padding: 0;">
+                        <li>✅ Developing AI-powered applications</li>
+                        <li>✅ Building scalable data pipelines</li>
+                        <li>✅ Creating insightful data visualizations</li>
+                        <li>✅ Implementing cloud-based AI solutions</li>
+                    </ul>
+                    <h6>
+                        I enjoy sharing my knowledge through projects, blogs, and tutorials to help others explore the fascinating world of AI & Data.
+                        Explore my projects and certifications to see my work in action! 🚀
+                    </h6>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
-
-        <div id="projects" style="background-color: #092D21; width: 100vw;">
-        <div class="container py-3">  <!-- Reduced padding -->
+    <div id="projects" style="background-color: #092D21; width: 100vw;">
+        <div class="container py-3">
             <div class="row justify-content-center g-4 text-center">
                 <div class="col-lg-5 col-md-6 col-sm-12 card pt-3 mx-lg-3">
                     <h5 class="card-title">HR Analytics (Employee Attrition)</h5>
@@ -331,15 +334,13 @@
                 </div>
             </div>
 
-
-
             <div class="row justify-content-center g-4 text-center">
-                <div class="col-lg-5 col-md-6 col-sm-12 p-3">  <!-- Removed pt-5 -->
+                <div class="col-lg-5 col-md-6 col-sm-12 p-3">
                     <div class="ratio ratio-16x9">
                         <iframe width="560" height="315" src="https://www.youtube.com/embed/oAQYgrX1UGs?si=VWJbsEVCuIB4Ym7r" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     </div>
                 </div>
-                <div class="col-lg-5 col-md-6 col-sm-12 p-3">  <!-- Removed pt-5 -->
+                <div class="col-lg-5 col-md-6 col-sm-12 p-3">
                     <div class="ratio ratio-16x9">
                         <iframe src="https://www.youtube.com/embed/SESH--gqOag?si=cHsihPIwogCVsr67"
                             title="YouTube video player"
@@ -351,8 +352,6 @@
             </div>
         </div>
     </div>
-
-
 
     <div id="contact" class="pb-5" style="background-color: black; width: 100vw; color: white">
         <div class="pt-5 text-center">
