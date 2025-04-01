@@ -3,381 +3,827 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Decoding Digital Age</title>
-    <link rel="shortcut icon" href="../static/uploads/xyz.png">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <title>Anuj Kothiyal - Data Engineer</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Typed.js for animated tagline -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <!-- Font Awesome for social icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        :root {
-            --primary-color: #092D21;
-            --accent-color: #F5D314;
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
         body {
-            overflow-x: hidden;
-            width: 100%;
-            max-width: 100vw;
-            background: linear-gradient(to right, #4facfe, #00f2fe);
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #e0e1dd;
+            background: #0d1b2a;
         }
 
-        /* Navbar Styles */
+        /* Navbar */
         .navbar {
-            width: 100%;
-            padding: 0.5rem;
-        }
-
-        .navbar-brand {
-            padding-left: 1rem;
-        }
-
-        .profile-img {
-            border-radius: 50%;
-            width: 250px;
-            height: 250px;
-            object-fit: cover;
-            border: 5px solid white;
-            box-shadow: 0 0 10px #ff3131, 0 0 20px #ff8800, 0 0 30px #ffcc00;
-        }
-
-        .navbar-nav {
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .nav-item {
-            margin: 0.5rem 1rem !important;
-        }
-
-        /* About Section */
-        #about {
-            width: 100%;
-            padding: 0.5rem;
-            margin-top: 0;
-        }
-
-        #about img {
-            max-width: 100%;
-            height: auto;
-            margin-bottom: 1rem;
-        }
-
-        #about .row {
+            position: sticky;
+            top: 0;
+            background: rgba(13, 27, 42, 0.9);
+            backdrop-filter: blur(10px);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
             align-items: center;
-            padding-top: 0;
+            z-index: 1000;
+            animation: slideIn 0.5s ease-out;
         }
 
-        /* Projects Section */
-        #projects {
-            width: 100%;
-            padding: 3rem 1rem;
+        .nav-brand .logo {
+            color: #00b4d8;
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-decoration: none;
+            transition: color 0.3s;
         }
 
-        .card {
-            margin-bottom: 2rem;
-            height: 100%;
+        .nav-brand .logo:hover {
+            color: #90e0ef;
         }
 
-        .card img {
-            width: 100%;
-            height: auto;
-            object-fit: cover;
+        .nav-menu {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+            align-items: center;
         }
 
-        .ratio {
-            width: 100%;
-            margin-bottom: 2rem;
-        }
-
-        /* Certifications Section */
-        #certifications {
-            width: 100%;
-            padding: 3rem 1rem;
-        }
-
-        .cert-card {
-            margin-bottom: 2rem;
-        }
-
-        /* Contact Section */
-        #contact {
-            width: 100%;
-            padding: 3rem 1rem;
-        }
-
-        /* Responsive Grid */
-        @media (max-width: 1200px) {
-            .container {
-                max-width: 95%;
-            }
-        }
-
-        @media (max-width: 992px) {
-            .navbar-nav {
-                margin-top: 0.5rem;
-            }
-
-            .nav-item {
-                margin: 0.3rem 0 !important;
-            }
-        }
-
-        @media (max-width: 768px) {
-            #about .col-md-4 {
-                text-align: center;
-            }
-
-            #about img {
-                max-width: 80%;
-            }
-
-            .card, .cert-card {
-                max-width: 90%;
-                margin: 0 auto 2rem;
-            }
-        }
-
-        @media (max-width: 576px) {
-            .navbar-brand h3 {
-                font-size: 1.5rem;
-            }
-
-            #about img {
-                max-width: 100%;
-            }
-
-            .card, .cert-card {
-                max-width: 100%;
-            }
-
-            h3 {
-                font-size: 1.75rem;
-            }
-
-            h6 {
-                font-size: 1rem;
-            }
-
-            /* Ensure buttons stack vertically and add spacing on small screens */
-            .card-body .btn {
-                display: block; /* Stack buttons vertically */
-                width: 100%; /* Make buttons full-width */
-                margin-bottom: 1rem; /* Add spacing between buttons */
-            }
-
-            /* Remove the margin-bottom from the last button to avoid extra space at the bottom */
-            .card-body .btn:last-child {
-                margin-bottom: 0;
-            }
-        }
-
-        /* Fix for horizontal scroll */
-        .row {
-            margin-left: 0;
-            margin-right: 0;
-        }
-
-        .container-fluid {
-            padding-left: 0;
-            padding-right: 0;
-        }
-
-        /* YouTube video container */
-        .video-container {
+        .nav-link {
+            color: #e0e1dd;
+            text-decoration: none;
             position: relative;
-            width: 100%;
-            padding-bottom: 56.25%;
+            transition: color 0.3s;
         }
 
-        .video-container iframe {
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: #00b4d8;
+            bottom: -5px;
+            left: 0;
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .nav-link:hover {
+            color: #00b4d8;
+        }
+
+        .nav-btn {
+            display: inline-block;
+            padding: 8px 16px;
+            background: #00b4d8;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 20px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .nav-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0, 180, 216, 0.4);
+        }
+
+        .nav-toggle {
+            display: none;
+            font-size: 1.5rem;
+            color: #e0e1dd;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 80vh;
+            background: linear-gradient(135deg, #0d1b2a, #415a77);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #ffffff;
+            padding-top: 60px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            border: 0;
+            background: radial-gradient(circle, rgba(0, 180, 216, 0.1) 0%, transparent 70%);
+            animation: wave 10s infinite ease-in-out;
         }
 
-        /* Image aspect ratio fix */
-        .img-fluid {
-            max-width: 100%;
-            height: auto;
-            object-fit: cover;
-        }
-
-        /* Fix for social icons */
-        .social-links {
+        .hero-content {
             display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-bottom: 1.5rem;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            width: 100%;
+            padding: 0 20px;
+            z-index: 1;
+        }
+
+        .hero-text {
+            flex: 1;
+            text-align: left;
+        }
+
+        .hero-text h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero-text p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background: #00b4d8;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0, 180, 216, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            border: 2px solid #00b4d8;
+        }
+
+        .btn-secondary:hover {
+            background: #00b4d8;
+        }
+
+        .btn-small {
+            padding: 8px 16px;
+            font-size: 0.9rem;
+        }
+
+        .social-links {
+            margin: 2rem 0;
         }
 
         .social-links a {
+            color: #e0e1dd;
             font-size: 1.5rem;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: #00b4d8;
+        }
+
+        .skill-badges {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            background: #778da9;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            transition: background 0.3s;
+        }
+
+        .badge:hover {
+            background: #00b4d8;
+        }
+
+        .hero-image {
+            flex: 1;
+            text-align: right;
+        }
+
+        .hero-image img {
+            max-width: 400px;
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero-image img:hover {
+            transform: scale(1.05);
+        }
+
+        .animate-pulse {
+            animation: pulse 2s infinite;
+        }
+
+        /* About Section */
+        .about {
+            padding: 60px 20px;
+            text-align: center;
+            background: #1b263b;
+        }
+
+        .about h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #00b4d8;
+        }
+
+        .about-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .about-text p {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+
+        .about-text strong {
+            color: #00b4d8;
+        }
+
+        .about-text .skill-badges {
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        /* Portfolio Section */
+        .portfolio {
+            padding: 60px 20px;
+            background: #0d1b2a;
+            text-align: center;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 2rem auto;
+        }
+
+        .portfolio-item {
+            background: #1b263b;
+            padding: 1.5rem;
+            border-radius: 15px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .portfolio-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 180, 216, 0.2);
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .portfolio-item h3 {
+            margin: 1rem 0 0.5rem;
+            font-size: 1.3rem;
+            color: #00b4d8;
+        }
+
+        .project-links {
+            margin: 1rem 0;
+        }
+
+        .project-video {
+            margin-top: 1rem;
+        }
+
+        .project-video iframe {
+            width: 100%;
+            height: 200px;
+            border-radius: 10px;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 60px 20px;
+            background: #1b263b;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(0, 180, 216, 0.1) 0%, transparent 70%);
+            animation: wave 10s infinite ease-in-out;
+        }
+
+        .contact h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #00b4d8;
+        }
+
+        .contact p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 2rem auto;
+            background: rgba(13, 27, 42, 0.8);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .form-group {
+            position: relative;
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #415a77;
+            border-radius: 8px;
+            background: #1b263b;
+            color: #e0e1dd;
+            font-size: 1rem;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        .form-group textarea {
+            height: 150px;
+            resize: none;
+        }
+
+        .form-group label {
+            position: absolute;
+            top: 12px;
+            left: 15px;
+            color: #778da9;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            pointer-events: none;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: #00b4d8;
+            box-shadow: 0 0 8px rgba(0, 180, 216, 0.3);
+            outline: none;
+        }
+
+        .form-group input:focus + label,
+        .form-group textarea:focus + label,
+        .form-group input:not(:placeholder-shown) + label,
+        .form-group textarea:not(:placeholder-shown) + label {
+            top: -10px;
+            left: 10px;
+            font-size: 0.8rem;
+            color: #00b4d8;
+            background: #1b263b;
+            padding: 0 5px;
+        }
+
+        .contact-form button {
+            background: linear-gradient(135deg, #00b4d8, #0077b6);
+            border: none;
+            padding: 12px 30px;
+            font-size: 1rem;
+            border-radius: 25px;
+            color: #fff;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .contact-form button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0, 180, 216, 0.4);
+        }
+
+        .contact-form button:disabled {
+            background: #778da9;
+            cursor: not-allowed;
+        }
+
+        #responseMessage {
+            margin-top: 1rem;
+            font-size: 1rem;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        #responseMessage.success {
+            color: #00b4d8;
+            opacity: 1;
+        }
+
+        #responseMessage.error {
+            color: #ff6b6b;
+            opacity: 1;
+        }
+
+        .links {
+            margin-top: 2rem;
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+
+        .links a {
+            color: #e0e1dd;
+            text-decoration: none;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: color 0.3s;
+        }
+
+        .links a:hover {
+            color: #00b4d8;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #0d1b2a;
+            color: #778da9;
+        }
+
+        /* Animations */
+        @keyframes slideIn {
+            from { transform: translateY(-100%); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        @keyframes wave {
+            0% { transform: scale(1); opacity: 0.5; }
+            50% { transform: scale(1.2); opacity: 0.3; }
+            100% { transform: scale(1); opacity: 0.5; }
+        }
+
+        .animate-fade-in {
+            animation: fadeIn 1s ease-out;
+        }
+
+        .scroll-reveal {
+            opacity: 0;
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        .scroll-reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-toggle {
+                display: block;
+            }
+
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: rgba(13, 27, 42, 0.95);
+                flex-direction: column;
+                padding: 1rem;
+                gap: 1rem;
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .nav-link::after {
+                display: none;
+            }
+
+            .nav-btn {
+                width: fit-content;
+                margin: 0 auto;
+            }
+
+            .hero-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero-text {
+                text-align: center;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .social-links {
+                justify-content: center;
+                display: flex;
+            }
+
+            .skill-badges {
+                justify-content: center;
+            }
+
+            .hero-image {
+                margin-top: 2rem;
+            }
+
+            .hero-image img {
+                max-width: 300px;
+            }
+
+            .project-video iframe {
+                height: 150px;
+            }
+
+            .contact-form {
+                padding: 1.5rem;
+            }
+        }
+
+        .whatsapp-icon {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #25D366;
+            color: white;
+            font-size: 30px;
+            padding: 10px 20px;
+            border-radius: 50%;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+            z-index: 10;
+            transition: transform 0.3s;
+        }
+
+        .whatsapp-icon:hover {
+            transform: scale(1.1);
         }
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg bg-black">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="/">
-                <h3 style="color: white">
-                    <span style="color: yellow">Decoding </span>
-                    <span style="color: yellowgreen">Digital</span>
-                    <span style="color: cyan">Age</span>
-                </h3>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="background-color: white">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent" style="margin-left: 12vw">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item" style="margin-left: 5vw">
-                        <a class="nav-link active" aria-current="page" href="#about" style="color: yellowgreen; font-size: 14pt">About </a>
-                    </li>
-                    <li class="nav-item" style="margin-left: 5vw">
-                        <a class="nav-link active" aria-current="page" href="#projects" style="color: white; font-size: 14pt">Projects </a>
-                    </li>
-                    <li class="nav-item" style="margin-left: 5vw">
-                        <a class="nav-link active" aria-current="page" href="#certifications" style="color: white; font-size: 14pt">Certifications </a>
-                    </li>
-                    <li class="nav-item" style="margin-left: 5vw">
-                        <a class="nav-link active" aria-current="page" href="#contact" style="color: white; font-size: 14pt">Contact </a>
-                    </li>
-                </ul>
-            </div>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-brand">
+            <a href="#" class="logo">Anuj Kothiyal</a>
         </div>
+        <div class="nav-toggle">☰</div>
+        <ul class="nav-menu">
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#portfolio" class="nav-link">Projects</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+            <li><a href="resume.pdf" class="nav-btn" download>Resume</a></li>
+        </ul>
     </nav>
 
-    <div id="about" style="background-color: #092D21; color: white;">
-        <div class="container py-5">
-            <div class="row justify-content-center align-items-center">
-                <div class="col-12 col-md-4 d-flex justify-content-center">
-                    <img src="../static/uploads/anuj2.jpg"
-                         class="profile-img"
-                         alt="Anuj Kothiyal" />
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content animate-fade-in">
+            <div class="hero-text">
+                <h1>Anuj Kothiyal</h1>
+                <p><span id="typed-text"></span></p>
+                <div class="hero-buttons">
+                    <a href="#portfolio" class="btn animate-pulse">Explore My Projects</a>
+                    <a href="#contact" class="btn btn-secondary">Contact Me</a>
                 </div>
-                <div class="col-12 col-md-6 text-md-start mt-4">
-                    <h3 class="mb-3">
-                        I am <span style="color: #F5D314;">Anuj Kothiyal</span>,
-                    </h3>
-                    <h6 class="mb-3">
-                        An AI Developer & Data Engineer passionate about building intelligent solutions that drive business value.
-                    </h6>
-                    <h6 class="mb-3">I specialize in:</h6>
-                    <ul class="mb-3" style="list-style: none; padding: 0;">
-                        <li>✅ Developing AI-powered applications</li>
-                        <li>✅ Building scalable data pipelines</li>
-                        <li>✅ Creating insightful data visualizations</li>
-                        <li>✅ Implementing cloud-based AI solutions</li>
-                    </ul>
-                    <h6>
-                        I enjoy sharing my knowledge through projects, blogs, and tutorials to help others explore the fascinating world of AI & Data.
-                        Explore my projects and certifications to see my work in action! 🚀
-                    </h6>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/anujkothiyal/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/anujkothiyal01" target="_blank"><i class="fab fa-github"></i></a>
+                </div>
+                <div class="skill-badges">
+                    <span class="badge">Python</span>
+                    <span class="badge">AWS</span>
+                    <span class="badge">SQL</span>
+                    <span class="badge">ETL</span>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="/static/dp.png" alt="Anuj Kothiyal">
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2 class="scroll-reveal">About Me</h2>
+        <div class="about-content scroll-reveal">
+            <div class="about-text">
+                <p>Hi, I’m Anuj Kothiyal, a Data Engineer Intern at <strong>Mactores</strong>, where I’m gaining hands-on experience with <strong>Snowflake</strong> to build and optimize data pipelines. I’m passionate about transforming raw data into actionable insights that drive business decisions.</p>
+                <p>With a strong foundation in Python, SQL, and cloud technologies like AWS, I’m eager to contribute to scalable data solutions and grow as a data engineering professional.</p>
+                <div class="skill-badges">
+                    <span class="badge">Snowflake</span>
+                    <span class="badge">Python</span>
+                    <span class="badge">SQL</span>
+                    <span class="badge">AWS</span>
+                    <span class="badge">ETL</span>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div id="projects" style="background-color: #092D21; width: 100vw;">
-        <div class="container py-3">
-            <div class="row justify-content-center g-4 text-center">
-                <div class="col-lg-5 col-md-6 col-sm-12 card pt-3 mx-lg-3">
-                    <h5 class="card-title">HR Analytics (Employee Attrition)</h5>
-                    <img src="../static/uploads/hr-analytics.png" class="card-img-top" alt="HR Analytics Project" style="width: 100%; height: auto;">
-                    <div class="card-body">
-                        <a href="https://github.com/artist-gen1/HR-Analytics-Report" class="btn btn-success">Source Code</a>
-                    </div>
-                </div>
-
-                <div class="col-lg-5 col-md-6 col-sm-12 card pt-3 mx-lg-3">
-                    <h5 class="card-title">Azure Data Engineering Pipeline with ADF & Databricks</h5>
-                    <img src="../static/uploads/azure_pipeline.png" class="card-img-top" alt="HR Analytics Project" style="width: 100%; height: auto;">
-                    <div class="card-body">
-                        <a href="https://github.com/anujkothiyal01/azure_de_pipeline_adf_db_nyc" class="btn btn-success">Source Code</a>
-                    </div>
-                </div>
-
-                <div class="col-lg-5 col-md-6 col-sm-12 card pt-3 mx-lg-3">
-                    <h5 class="card-title">Retail Sales Tracking Project [Snowflake + Streamlit]</h5>
-                    <img src="../static/uploads/retail_sales_tracking_project.png" class="card-img-top" alt="Retail Sales Tracking Project" style="width: 100%; height: auto;">
-                    <div class="card-body">
-                        <a href="https://github.com/anujkothiyal01/snowflake_projects" class="btn btn-success">Source Code</a>
-                        <a href="https://retail-sales-tracking-project.streamlit.app/" class="btn btn-primary">Live Link</a>
-                    </div>
-                </div>
-
-                <!-- Add the Happiness Data Loader Project Card -->
-                <div class="col-lg-5 col-md-6 col-sm-12 card pt-3 mx-lg-3">
-                    <h5 class="card-title">Happiness Data Loader</h5>
-                    <img src="../static/uploads/happiness_report.png" class="card-img-top" alt="Happiness Data Loader Project" style="width: 100%; height: auto;">
-                    <div class="card-body">
-                        <a href="https://github.com/anujkothiyal01/snowflake_projects" class="btn btn-success">Source Code</a>
-                        <a href="https://medium.com/@anujkothiyal/uncovering-the-happiest-countries-with-snowflake-a-quick-data-project-8e5998d81e6a" class="btn btn-primary">Medium Blog</a>
-                    </div>
-                </div>
-
-                <div class="col-lg-5 col-md-6 col-sm-12 card pt-3 mx-lg-3">
-                    <h5 class="card-title">ETL Pipeline using AWS [S3, Glue, Lambda, IAM]</h5>
-                    <img src="../static/uploads/etl_pipeline_aws.png" class="card-img-top" alt="HR Analytics Project" style="width: 100%; height: auto;">
-                    <div class="card-body">
-                        <a href="https://github.com/anujkothiyal01/etl-pipeline-1" class="btn btn-success">Source Code</a>
-                    </div>
-                </div>
-
-                <div class="col-lg-5 col-md-6 col-sm-12 card pt-3 mx-lg-3">
-                    <img src="../static/uploads/opencv.png" class="card-img-top" alt="HR Analytics Project" style="width: 100%; height: auto;">
-                    <div class="card-body">
-                        <a href="https://github.com/artist-gen1/HR-Analytics-Report" class="btn btn-success">Link</a>
-                    </div>
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <h2 class="scroll-reveal">My Projects</h2>
+        <div class="portfolio-grid">
+            <div class="portfolio-item scroll-reveal">
+                <img src="/static/retail_sales_tracking_project.png" alt="Retail Sales Tracking">
+                <h3>Retail Sales Tracking Project</h3>
+                <p>Developed a Streamlit app to track and visualize retail sales data, leveraging Snowflake for data storage and Python for analysis.</p>
+                <div class="project-links">
+                    <a href="https://retail-sales-tracking-project.streamlit.app/" target="_blank" class="btn btn-small">Live Demo</a>
                 </div>
             </div>
-
-            <div class="row justify-content-center g-4 text-center">
-                <div class="col-lg-5 col-md-6 col-sm-12 p-3">
-                    <div class="ratio ratio-16x9">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/oAQYgrX1UGs?si=VWJbsEVCuIB4Ym7r" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    </div>
+            <div class="portfolio-item scroll-reveal">
+                <img src="/static/hr-analytics.png" alt="Retail Sales Tracking">
+                <h3>Retail Sales Tracking Project</h3>
+                <p>Developed a Streamlit app to track and visualize retail sales data, leveraging Snowflake for data storage and Python for analysis.</p>
+                <div class="project-links">
+                    <a href="https://retail-sales-tracking-project.streamlit.app/" target="_blank" class="btn btn-small">Live Demo</a>
                 </div>
-                <div class="col-lg-5 col-md-6 col-sm-12 p-3">
-                    <div class="ratio ratio-16x9">
-                        <iframe src="https://www.youtube.com/embed/SESH--gqOag?si=cHsihPIwogCVsr67"
-                            title="YouTube video player"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            allowfullscreen>
-                        </iframe>
-                    </div>
+            </div>
+            <div class="portfolio-item scroll-reveal">
+                <img src="/static/azure_pipeline-1.png" alt="Retail Sales Tracking">
+                <h3>Retail Sales Tracking Project</h3>
+                <p>Developed a Streamlit app to track and visualize retail sales data, leveraging Snowflake for data storage and Python for analysis.</p>
+                <div class="project-links">
+                    <a href="https://retail-sales-tracking-project.streamlit.app/" target="_blank" class="btn btn-small">Live Demo</a>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div id="contact" class="pb-5" style="background-color: black; width: 100vw; color: white">
-        <div class="pt-5 text-center">
-            <div class="mb-4">
-                <a href="https://www.linkedin.com/in/anujkothiyal/"><i class="fa-brands fa-linkedin-in" style="color: #608AFD; font-size: 20pt"></i></a>
-                <a href="https://github.com/anujkothiyal01"><i class="fa-brands fa-github ms-4" style="color: white; font-size: 20pt"></i></a>
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2 class="scroll-reveal">Contact Me</h2>
+        <p class="scroll-reveal">Let’s discuss how I can help with your data challenges!</p>
+        <form class="contact-form scroll-reveal" id="contactForm">
+            <div class="form-group">
+                <input type="text" id="name" placeholder=" " required>
+                <label for="name">Name</label>
             </div>
-            <h5>Anuj Kothiyal</h5>
+            <div class="form-group">
+                <input type="email" id="email" placeholder=" " required>
+                <label for="email">Email</label>
+            </div>
+            <div class="form-group">
+                <textarea id="message" placeholder=" " required></textarea>
+                <label for="message">Your Message</label>
+            </div>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+        <p id="responseMessage"></p>
+        <div class="links scroll-reveal">
+            <a href="https://www.linkedin.com/in/anujkothiyal/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            <a href="https://github.com/anujkothiyal01" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+            <a href="resume.pdf" download><i class="fas fa-file-download"></i> Download Resume</a>
         </div>
-    </div>
+    </section>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- WhatsApp Floating Button -->
+    <a href="https://api.whatsapp.com/send/?phone=919997305983&text=Hello%2C%20I’m%20interested%20in%20connecting%20with%20you%20regarding%20data%20engineering%20opportunities.%20Could%20we%20discuss%20further%3F" target="_blank" class="whatsapp-icon">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <footer>
+        <p>© 2025 Anuj Kothiyal. All rights reserved.</p>
+    </footer>
+
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const navLinks = document.querySelectorAll('.nav-link');
-            const navbarCollapse = document.querySelector('.navbar-collapse');
+    // Scroll reveal animation
+    document.addEventListener('DOMContentLoaded', () => {
+        const reveals = document.querySelectorAll('.scroll-reveal');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.2 });
 
-            navLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    if (window.innerWidth < 992) {
-                        navbarCollapse.classList.remove('show');
-                    }
-                });
+        reveals.forEach(reveal => {
+            observer.observe(reveal);
+            reveal.style.transform = 'translateY(30px)';
+        });
+
+        // Navbar toggle for mobile
+        const navToggle = document.querySelector('.nav-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+
+        navToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            navToggle.textContent = navMenu.classList.contains('active') ? '✕' : '☰';
+        });
+
+        // Typed.js for animated tagline
+        new Typed('#typed-text', {
+            strings: [
+                'Data Engineer | Turning Raw Data into Actionable Insights',
+                'ETL Specialist | Building Scalable Pipelines',
+                'Cloud Expert | AWS & Snowflake Enthusiast'
+            ],
+            typeSpeed: 50,
+            backSpeed: 30,
+            backDelay: 1000,
+            loop: true
+        });
+
+        // Contact form submission
+        const contactForm = document.getElementById("contactForm");
+        const responseMessage = document.getElementById("responseMessage");
+        const submitButton = contactForm.querySelector("button");
+
+        contactForm.addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            // Disable button and show loading state
+            submitButton.disabled = true;
+            submitButton.textContent = "Sending...";
+
+            // Replace with your Google Form URL (pre-filled format)
+            const googleFormURL = "https://docs.google.com/forms/d/e/1FAIpQLSfD5wOlQLsOWzhoM5Ve_Kyd_HbCk77XvbiUtEe62rCB0DViYw/formResponse";
+
+            // Get form values
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const message = document.getElementById("message").value;
+
+            // Google Forms field entry numbers (Inspect form page to find these)
+            const formData = new FormData();
+            formData.append("entry.1076821881", name);  // Replace with actual entry ID for Name
+            formData.append("entry.302377694", email); // Replace with actual entry ID for Email
+            formData.append("entry.207068045", message); // Replace with actual entry ID for Message
+
+            fetch(googleFormURL, {
+                method: "POST",
+                body: formData,
+                mode: "no-cors"
+            }).then(() => {
+                responseMessage.textContent = "✅ Your message has been sent!";
+                responseMessage.className = "success";
+                contactForm.reset();
+                submitButton.disabled = false;
+                submitButton.textContent = "Send Message";
+            }).catch(() => {
+                responseMessage.textContent = "❌ There was an error. Please try again!";
+                responseMessage.className = "error";
+                submitButton.disabled = false;
+                submitButton.textContent = "Send Message";
             });
         });
-    </script>
+    });
+</script>
 </body>
 </html>
